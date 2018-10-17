@@ -2,7 +2,7 @@ class Ant:
     def __init__(self, originVertice):
         self.path = [originVertice]
         self.pathWeight = 0
-        self.validPath = 1
+        self.validPath = True
 
     def walk(self, targetVertice, edgeWeight):
         self.path.append(targetVertice)

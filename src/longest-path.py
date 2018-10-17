@@ -19,7 +19,10 @@ print('n_ants:', len(ants))
 print('n_vertices:', g.nVertices)
 print('n_edges:', g.nEdges)
 
-aco.build_solution(ants[0], g.minVertice, g.maxVertice)
+for antIndex in range(len(ants)):
+    aco.build_solution(ants[antIndex], g.minVertice, g.maxVertice)
+
+
 # for iteration in range(args.iterations):
     # for antIndex in range(len(ants)):
     #     aco.build_solution(ants[antIndex], g.minVertice, g.maxVertice)
