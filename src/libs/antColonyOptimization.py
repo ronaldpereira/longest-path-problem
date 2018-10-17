@@ -1,8 +1,8 @@
 import numpy as np
 
+
 class AntColonyOptimization:
-    def __init__(self, evaporationRate, g):
-        self.evaporationRate = evaporationRate
+    def __init__(self, g):
         self.g = g
         self.graph = g.graph
 
@@ -12,7 +12,6 @@ class AntColonyOptimization:
         while actualVertice != targetVertice and ant.validPath:
             nextVertice = self.probabilistic_transition(actualVertice, ant)
 
-
             if nextVertice > 0:
                 ant.walk(nextVertice, self.g.get_edge_weight(actualVertice, nextVertice))
                 actualVertice = nextVertice
@@ -20,10 +19,6 @@ class AntColonyOptimization:
             # If there's no valid path from that actual vertice
             else:
                 ant.validPath = False
-
-        print(ant.path)
-        print(ant.pathWeight)
-        print(ant.validPath)
             
     def probabilistic_transition(self, originVertice, ant):
         pathDistribution = []
@@ -31,12 +26,10 @@ class AntColonyOptimization:
         for edge in self.graph[originVertice]:
             if edge['target'] not in ant.path:
                 totalPheromone += edge['pheromone']
-                pathDistribution.extend([edge['target']]*edge['pheromone'])
+                pathDistribution.extend([edge['target']]*edge['weight']*edge['pheromone'])
         
         if len(pathDistribution) > 0:
             targetVertice = pathDistribution[np.random.randint(totalPheromone)]
             return targetVertice
         else:
             return 0
-
-
