@@ -1,24 +1,16 @@
 class Ant:
-    def __init__(self):
-        self.path = []
-        self.pathLength = 0
+    def __init__(self, originVertice):
+        self.path = [originVertice]
+        self.pathWeight = 0
         self.validPath = 1
 
-    def walk(self, originVertice, targetVertice, pathLength):
-        if len(self.path) == 0:
-            self.path = [originVertice, targetVertice]
-
-        else:
-            if self.path[-1] == originVertice:
-                self.path.append(originVertice)
-                self.pathLength += pathLength
+    def walk(self, targetVertice, edgeWeight):
+        self.path.append(targetVertice)
+        self.pathWeight += edgeWeight
                 
-            else:
-                self.validPath = 0
-                
-def ant_colony_creator(n_ants):
+def ant_colony_creator(n_ants, originVertice):
     colony = []
     for _ in range(n_ants):
-        colony.append(Ant())
+        colony.append(Ant(originVertice))
         
     return colony

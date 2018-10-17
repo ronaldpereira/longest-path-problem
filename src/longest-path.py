@@ -11,14 +11,15 @@ g = GRAPH.Graph(args.input)
 # print(g.graph[g.minVertice])
 # print(g.graph[g.maxVertice])
 
-ants = ANT.ant_colony_creator(args.ants)
+ants = ANT.ant_colony_creator(args.ants, g.minVertice)
 
 aco = ACO.AntColonyOptimization(args.evaporation_rate, g)
 
-print(len(ants))
-print(g.nVertices)
-print(g.nEdges)
+print('n_ants:', len(ants))
+print('n_vertices:', g.nVertices)
+print('n_edges:', g.nEdges)
 
-for iteration in range(args.iterations):
-    for antIndex in range(len(ants)):
-        pass
+aco.build_solution(ants[0], g.minVertice, g.maxVertice)
+# for iteration in range(args.iterations):
+    # for antIndex in range(len(ants)):
+    #     aco.build_solution(ants[antIndex], g.minVertice, g.maxVertice)
