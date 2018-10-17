@@ -1,11 +1,10 @@
 import sys
 import libs.graph as graph
+import libs.argParserConfig as APC
 
-try:
-    inputPath = sys.argv[1]
-except:
-    raise Exception('Not all required arguments were given. Execute \'make help\' for more detailed instructions.')
+args = APC.parser()
 
-g = graph.Graph(inputPath)
-print(g.graph[g.minVertice])
-print(g.graph[g.maxVertice])
+g = graph.Graph(args.input)
+print(g.graph)
+# print(g.graph[g.minVertice])
+# print(g.graph[g.maxVertice])
