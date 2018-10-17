@@ -1,6 +1,8 @@
 class Graph:
     def __init__(self, inputPath, pheromoneInitialValue=1):
         self.graph = {}
+        self.nVertices = 0
+        self.nEdges = 0
 
         with open(inputPath, 'r') as inputFile:
             for line in inputFile:
@@ -13,10 +15,15 @@ class Graph:
 
                 try:
                     self.graph[originVertice].append(dictData)
+
+                # If the origin vertice is not in the graph
                 except KeyError:
                     self.graph[originVertice] = [dictData]
 
+                self.nEdges += 1
+
         if len(self.graph) > 0:
+            self.nVertices = len(self.graph.keys())
             self.minVertice = min(self.graph.keys())
             self.maxVertice = max(self.graph.keys())
 

@@ -8,7 +8,7 @@ def parser():
 
     # Optional arguments
     parser.add_argument('-a', '--ants', type=int, default=20, help='Number of ants in each iteration (default: 20)')
-    parser.add_argument('-e', '--evaporation_rate', type=float, default=0.05, help='Evaporation rate in each iteration (default: 0.05)')
+    parser.add_argument('-e', '--evaporation_rate', type=float, default=0.2, help='Evaporation rate in each iteration (default: 0.2)')
     parser.add_argument('-i', '--iterations', type=int, default=100, help='Number of iterations to be executed (default: 100)')
 
     args = parser.parse_args()

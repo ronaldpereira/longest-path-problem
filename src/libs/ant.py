@@ -16,3 +16,9 @@ class Ant:
             else:
                 self.validPath = 0
                 
+def ant_colony_creator(n_ants):
+    colony = []
+    for _ in range(n_ants):
+        colony.append(Ant())
+        
+    return colony
