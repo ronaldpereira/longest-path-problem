@@ -3,5 +3,8 @@ class AntColonyOptimization:
         self.evaporationRate = evaporationRate
         self.g = g
 
+    def build_solution(self, ant):
+        pass
+
     def probabilistic_transition(self):
         pass
