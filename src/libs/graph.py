@@ -10,3 +10,7 @@ class Graph:
                     self.graph[originVertice].append((targetVertice, edgeWeight))
                 except KeyError:
                     self.graph[originVertice] = [(targetVertice, edgeWeight)]
+
+        if len(self.graph) > 0:
+            self.minVertice = min(self.graph.keys())
+            self.maxVertice = max(self.graph.keys())
