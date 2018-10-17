@@ -1,7 +1,7 @@
 import argparse
 
 def parser():
-    parser = argparse.ArgumentParser(description='Longest Path Problem solution using Ant Colony Optimization (ACO).')
+    parser = argparse.ArgumentParser(description='Longest Path Problem heuristic solution using Ant Colony Optimization (ACO).')
 
     # Required arguments
     parser.add_argument('input', type=str, help='Input file path')

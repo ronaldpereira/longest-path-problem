@@ -1,6 +1,6 @@
 # Longest Path Problem
 
-Longest Path Problem using Python3 and Ant Colony Optimization (Natural Computing)
+Longest Path Problem heuristic solution using Ant Colony Optimization (ACO).
 
 ## How to 'Help Menu'
 
@@ -14,7 +14,7 @@ python3 longest-path.py -h
 usage: longest-path.py [-h] [-a ANTS] [-e EVAPORATION_RATE] [-i ITERATIONS]
                        input
 
-Longest Path Problem solution using Ant Colony Optimization (ACO).
+Longest Path Problem heuristic solution using Ant Colony Optimization (ACO).
 
 positional arguments:
   input                 Input file path
