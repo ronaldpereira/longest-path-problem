@@ -23,7 +23,7 @@ optional arguments:
   -h, --help            show this help message and exit
   -a ANTS, --ants ANTS  Number of ants in each iteration (default: 20)
   -e EVAPORATION_RATE, --evaporation_rate EVAPORATION_RATE
-                        Evaporation rate in each iteration (default: 0.05)
+                        Evaporation rate in each iteration (default: 0.2)
   -i ITERATIONS, --iterations ITERATIONS
                         Number of iterations to be executed (default: 100)
 ```
