@@ -34,7 +34,8 @@ for iteration in range(args.iterations):
     pheromoneUpdate.update(g.graph, ants)
 
     bestSolution.set_best_solution(ants)
-    # print(iteration, bestSolution.pathWeight)
+    
+    print(iteration, bestSolution.pathWeight)
     # print(g.graph[g.minVertice])
 
 
