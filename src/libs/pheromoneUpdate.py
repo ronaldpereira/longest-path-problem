@@ -1,6 +1,3 @@
-import math
-
-
 class PheromoneUpdate:
     def __init__(self, evaporationRate, k):
         self.evaporationRate = evaporationRate
