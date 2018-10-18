@@ -3,6 +3,9 @@ class Graph:
         self.graph = {}
         self.nVertices = 0
         self.nEdges = 0
+        self.vertices = []
+        self.minVertice = float('inf')
+        self.maxVertice = 0
 
         with open(inputPath, 'r') as inputFile:
             for line in inputFile:
@@ -21,11 +24,27 @@ class Graph:
                     self.graph[originVertice] = [dictData]
 
                 self.nEdges += 1
+                
+                if originVertice < self.minVertice:
+                    self.minVertice = originVertice
 
-        if len(self.graph) > 0:
-            self.nVertices = len(self.graph.keys())
-            self.minVertice = min(self.graph.keys())
-            self.maxVertice = max(self.graph.keys())
+                if originVertice > self.maxVertice:
+                    self.maxVertice = originVertice
+
+                if targetVertice < self.minVertice:
+                    self.minVertice = targetVertice
+
+                if targetVertice > self.maxVertice:
+                    self.maxVertice = targetVertice
+
+                if originVertice not in self.vertices:
+                    self.vertices.append(originVertice)
+                
+                if targetVertice not in self.vertices:
+                    self.vertices.append(targetVertice)
+
+        if len(self.vertices) > 0:
+            self.nVertices = len(self.vertices)
 
     def get_edge_weight(self, originVertice, targetVertice):
         if originVertice in self.graph.keys():
