@@ -30,9 +30,13 @@ for iteration in range(args.iterations):
         # print(ants[antIndex].path)
         # print(ants[antIndex].pathWeight)
         # print(ants[antIndex].validPath)
-        pheromoneUpdate.update(g.graph, ants)
+        
+    pheromoneUpdate.update(g.graph, ants)
 
     bestSolution.set_best_solution(ants)
+    # print(iteration, bestSolution.pathWeight)
+    # print(g.graph[g.minVertice])
+
 
 print(bestSolution.path)
 print(bestSolution.pathWeight)

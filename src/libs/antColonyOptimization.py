@@ -1,4 +1,5 @@
 import numpy as np
+import math
 
 
 class AntColonyOptimization:
@@ -22,14 +23,12 @@ class AntColonyOptimization:
             
     def probabilistic_transition(self, originVertice, ant):
         pathDistribution = []
-        totalPheromone = 0
         for edge in self.graph[originVertice]:
             if edge['target'] not in ant.path:
-                totalPheromone += edge['pheromone']
-                pathDistribution.extend([edge['target']]*edge['weight']*edge['pheromone'])
+                pathDistribution.extend([edge['target']]*math.ceil(edge['weight']*edge['pheromone']))
         
         if len(pathDistribution) > 0:
-            targetVertice = pathDistribution[np.random.randint(totalPheromone)]
+            targetVertice = pathDistribution[np.random.randint(len(pathDistribution))]
             return targetVertice
         else:
             return 0

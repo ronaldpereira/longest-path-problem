@@ -7,6 +7,10 @@ class PheromoneUpdate:
         self.k = k
     
     def update(self, graph, ants):
+        for originVertice in graph.keys():
+            for index in range(len(graph[originVertice])):
+                graph[originVertice][index]['pheromone'] = graph[originVertice][index]['pheromone'] * (1-self.evaporationRate)
+
         if self.k == 0:
             self.k = len(ants)
 
@@ -14,7 +18,3 @@ class PheromoneUpdate:
 
         for antIndex in range(self.k):
             sortedAnts[antIndex].deposite_pheromone(graph)
-
-        for originVertice in graph.keys():
-            for index in range(len(graph[originVertice])):
-                graph[originVertice][index]['pheromone'] = math.ceil(graph[originVertice][index]['pheromone'] * (1-self.evaporationRate))
