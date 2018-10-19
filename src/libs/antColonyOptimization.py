@@ -26,7 +26,7 @@ class AntColonyOptimization:
         pathDistribution = []
         for edge in self.graph[originVertice]:
             if edge['target'] not in ant.path:
-                pathDistribution.extend([edge['target']]*math.ceil(edge['weight']*edge['pheromone']))
+                pathDistribution.extend([edge['target'] for _ in range(math.ceil(edge['weight']*edge['pheromone']))])
         
         if len(pathDistribution) > 0:
             targetVertice = pathDistribution[np.random.randint(len(pathDistribution))]
