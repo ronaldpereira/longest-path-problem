@@ -2,7 +2,7 @@ import sys
 
 import libs.ant as ANT
 import libs.antColonyOptimization as ACO
-import libs.argParserConfig as APC
+import libs.argParseConfig as APC
 import libs.graph as GRAPH
 import libs.pheromoneUpdate as PU
 
