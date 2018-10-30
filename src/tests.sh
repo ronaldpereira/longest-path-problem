@@ -6,9 +6,9 @@ read REP
 # DEFAULTS:
 # -a 50
 # -e 0.1
-# -i 20
+# -i 50
 # -k 1
-# python3 longest-path.py -a 50 -e 0.1 -i 20 -k 1 input/datasets/graph1.txt
+# python3 longest-path.py -a 50 -e 0.1 -i 50 -k 1 input/datasets/graph1.txt
 
 I=1
 while [ $I -le $REP ]

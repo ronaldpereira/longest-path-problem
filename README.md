@@ -27,7 +27,7 @@ optional arguments:
                         Evaporation rate in each iteration between 0 and 1
                         (default: 0.1)
   -i ITERATIONS, --iterations ITERATIONS
-                        Number of iterations to be executed (default: 20)
+                        Number of iterations to be executed (default: 50)
   -k K_ANTS, --k_ants K_ANTS
                         Number of k best ants that will deposite pheromone on
                         path. If k=0, then all ants will deposit pheromone
