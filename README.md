@@ -22,12 +22,12 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
-  -a ANTS, --ants ANTS  Number of ants in each iteration (default: 500)
+  -a ANTS, --ants ANTS  Number of ants in each iteration (default: 50)
   -e EVAPORATION_RATE, --evaporation_rate EVAPORATION_RATE
                         Evaporation rate in each iteration between 0 and 1
                         (default: 0.1)
   -i ITERATIONS, --iterations ITERATIONS
-                        Number of iterations to be executed (default: 100)
+                        Number of iterations to be executed (default: 20)
   -k K_ANTS, --k_ants K_ANTS
                         Number of k best ants that will deposite pheromone on
                         path. If k=0, then all ants will deposit pheromone

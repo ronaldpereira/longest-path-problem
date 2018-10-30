@@ -1,5 +1,3 @@
-import sys
-
 import libs.ant as ANT
 import libs.antColonyOptimization as ACO
 import libs.argParseConfig as APC
@@ -26,6 +24,7 @@ bestSolution = ANT.BestSolution()
 for iteration in range(args.iterations):
     ants = ANT.ant_colony_creator(args.ants, g.minVertice)
     for antIndex in range(len(ants)):
+        print(antIndex)
         aco.build_solution(ants[antIndex], g.minVertice, g.maxVertice)
         # print(ants[antIndex].path)
         # print(ants[antIndex].pathWeight)
