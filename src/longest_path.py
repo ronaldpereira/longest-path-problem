@@ -1,8 +1,8 @@
 import libs.ant as ANT
-import libs.antColonyOptimization as ACO
-import libs.argParseConfig as APC
+import libs.ant_colony_optimization as ACO
+import libs.arg_parse_config as APC
 import libs.graph as GRAPH
-import libs.pheromoneUpdate as PU
+import libs.pheromone_update as PU
 
 args = APC.parser()
 

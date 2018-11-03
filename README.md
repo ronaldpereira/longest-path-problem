@@ -5,13 +5,13 @@ Longest Path Problem heuristic solution using Ant Colony Optimization (ACO).
 ## How to 'Help Menu'
 
 ```sh
-python3 longest-path.py -h
+python3 longest_path.py -h
 ```
 
 ## Usage
 
 ```text
-usage: longest-path.py [-h] [-a ANTS] [-e EVAPORATION_RATE] [-i ITERATIONS]
+usage: longest_path.py [-h] [-a ANTS] [-e EVAPORATION_RATE] [-i ITERATIONS]
                        [-k K_ANTS]
                        input
 
