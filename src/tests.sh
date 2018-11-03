@@ -77,24 +77,21 @@ do
     python3 longest_path.py -k 1 input/datasets/graph1.txt > output/$I/graph1/k/output1.txt &
     python3 longest_path.py -k 10 input/datasets/graph1.txt > output/$I/graph1/k/output2.txt &
     python3 longest_path.py -k 20 input/datasets/graph1.txt > output/$I/graph1/k/output3.txt &
-    python3 longest_path.py -k 40 input/datasets/graph1.txt > output/$I/graph1/k/output4.txt &
-    python3 longest_path.py -k 80 input/datasets/graph1.txt > output/$I/graph1/k/output5.txt
+    python3 longest_path.py -k 40 input/datasets/graph1.txt > output/$I/graph1/k/output4.txt
 
     printf "Graph2\n"
     mkdir -p output/$I/graph2/k
     python3 longest_path.py -k 1 input/datasets/graph2.txt > output/$I/graph2/k/output1.txt &
     python3 longest_path.py -k 10 input/datasets/graph2.txt > output/$I/graph2/k/output2.txt &
     python3 longest_path.py -k 20 input/datasets/graph2.txt > output/$I/graph2/k/output3.txt &
-    python3 longest_path.py -k 40 input/datasets/graph2.txt > output/$I/graph2/k/output4.txt &
-    python3 longest_path.py -k 80 input/datasets/graph2.txt > output/$I/graph2/k/output5.txt
+    python3 longest_path.py -k 40 input/datasets/graph2.txt > output/$I/graph2/k/output4.txt
 
     printf "Graph3\n"
     mkdir -p output/$I/graph3/k
     python3 longest_path.py -k 1 input/datasets/graph3.txt > output/$I/graph3/k/output1.txt &
     python3 longest_path.py -k 10 input/datasets/graph3.txt > output/$I/graph3/k/output2.txt &
     python3 longest_path.py -k 20 input/datasets/graph3.txt > output/$I/graph3/k/output3.txt &
-    python3 longest_path.py -k 40 input/datasets/graph3.txt > output/$I/graph3/k/output4.txt &
-    python3 longest_path.py -k 80 input/datasets/graph3.txt > output/$I/graph3/k/output5.txt
+    python3 longest_path.py -k 40 input/datasets/graph3.txt > output/$I/graph3/k/output4.txt 
 
     # Iteration changes
     printf "Executing iteration changes for iteration %d...\n" "$I"
